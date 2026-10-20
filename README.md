@@ -101,8 +101,8 @@ bash tools/build_apk.sh
 
 ## Windows 版
 
-- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `孤独摇滚-第五条音轨-1.0.0-win.exe`：安装程序（约 166MB），可以选安装位置，会建桌面和开始菜单快捷方式。
-- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `孤独摇滚-第五条音轨-1.0.0-win.zip`：免安装版，解压后双击 `孤独摇滚！第五条音轨.exe`。
+- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `孤独摇滚-第五条音轨-1.0.1-win.exe`：安装程序（约 166MB），可以选安装位置，会建桌面和开始菜单快捷方式。
+- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `孤独摇滚-第五条音轨-1.0.1-win.zip`：免安装版，解压后双击 `孤独摇滚！第五条音轨.exe`。
 - 窗口 16:9，可以拉伸；**F11 或 Alt+Enter 切换全屏**。不需要联网，存档保存在本机。
 - 程序没有数字签名，第一次运行时 Windows 可能弹出「Windows 已保护你的电脑」，点「更多信息 → 仍要运行」。
 

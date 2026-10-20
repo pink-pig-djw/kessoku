@@ -17,15 +17,21 @@
   if (NATIVE) document.body.classList.add('native');
 
   // ================= 缩放 =================
-  // 手机屏幕比 16:9 更长：舞台加宽到和屏幕同比例（高度不变，最宽 2560），画面铺满不留黑边
-  let stageW = 1920;
+  // 舞台跟着窗口 / 屏幕的比例变：比 16:9 宽就加宽（最宽 2560），比 16:9 高就加高（最高 1440），画面铺满不留黑边。
+  // 人物、界面都以中间的 1920×1080 为准；CG 完整显示，空出来的地方用模糊的同一张图补满（#stage.fill）
+  let stageW = 1920, stageH = 1080;
   function fit() {
-    const SW = MOBILE ? Math.round(Math.min(2560, Math.max(1920, 1080 * innerWidth / innerHeight))) : 1920;
-    if (SW !== stageW) {
-      stageW = SW; stage.style.width = SW + 'px'; stage.style.setProperty('--sw', SW + 'px');
-      const fc = document.getElementById('layer-fx'); if (fc) { fc.width = SW; try { if (fxType !== 'none') setFx(fxType); } catch (e) { /* 启动时特效还没初始化 */ } }
+    const ar = innerWidth / innerHeight;
+    const SW = Math.round(Math.min(2560, Math.max(1920, 1080 * ar)));
+    const SH = Math.round(Math.min(1440, Math.max(1080, 1920 / ar)));
+    if (SW !== stageW || SH !== stageH) {
+      stageW = SW; stageH = SH;
+      stage.style.width = SW + 'px'; stage.style.height = SH + 'px';
+      stage.style.setProperty('--sw', SW + 'px'); stage.style.setProperty('--sh', SH + 'px');
+      stage.classList.toggle('fill', SW !== 1920 || SH !== 1080);
+      const fc = document.getElementById('layer-fx'); if (fc) { fc.width = SW; fc.height = SH; try { if (fxType !== 'none') setFx(fxType); } catch (e) { /* 启动时特效还没初始化 */ } }
     }
-    const s = Math.min(innerWidth / stageW, innerHeight / 1080);
+    const s = Math.min(innerWidth / stageW, innerHeight / stageH);
     stage.style.transform = `scale(${s})`;
     stage.style.setProperty('--scale', `scale(${s})`);
   }
@@ -254,7 +260,7 @@
     for (let i = 0; i < n; i++) fxParts.push(newPart(true, i));
   }
   function newPart(init, i) {
-    const W = stageW, H = 1080, r = Math.random, X0 = (stageW - 1920) / 2;
+    const W = stageW, H = stageH, r = Math.random, X0 = (stageW - 1920) / 2;
     switch (fxType) {
       case 'rain': case 'heavyrain': return { x: r() * W * 1.2, y: init ? r() * H : -40, v: 28 + r() * 18, l: 30 + r() * 40, a: 0.15 + r() * 0.3 };
       case 'snow': return { x: r() * W, y: init ? r() * H : -10, v: 0.6 + r() * 1.4, s: 2 + r() * 5, ph: r() * 6.28, a: 0.5 + r() * 0.5 };
@@ -268,7 +274,7 @@
   }
   function fxLoop() {
     requestAnimationFrame(fxLoop);
-    fxCtx.clearRect(0, 0, stageW, 1080);
+    fxCtx.clearRect(0, 0, stageW, stageH);
     if (fxType === 'none' || !fxParts.length) return;
     const c = fxCtx;
     fxParts.forEach((p, i) => {
@@ -276,11 +282,11 @@
         case 'rain': case 'heavyrain':
           c.strokeStyle = `rgba(200,215,235,${p.a})`; c.lineWidth = fxType === 'heavyrain' ? 1.6 : 1.1;
           c.beginPath(); c.moveTo(p.x, p.y); c.lineTo(p.x - p.l * 0.18, p.y + p.l); c.stroke();
-          p.y += p.v; p.x -= p.v * 0.18; if (p.y > 1100) fxParts[i] = newPart(); break;
+          p.y += p.v; p.x -= p.v * 0.18; if (p.y > stageH + 20) fxParts[i] = newPart(); break;
         case 'snow':
           p.ph += 0.01; p.y += p.v; p.x += Math.sin(p.ph) * 0.6;
           c.fillStyle = `rgba(255,255,255,${p.a})`; c.beginPath(); c.arc(p.x, p.y, p.s, 0, 6.28); c.fill();
-          if (p.y > 1090) fxParts[i] = newPart(); break;
+          if (p.y > stageH + 10) fxParts[i] = newPart(); break;
         case 'petals':
           p.ph += 0.02; p.rot += 0.03; p.y += p.v; p.x += Math.sin(p.ph) * 1.2 - 0.8;
           c.save(); c.translate(p.x, p.y); c.rotate(p.rot); c.fillStyle = 'rgba(255,200,215,.85)';
@@ -309,7 +315,7 @@
           p.ph += 0.05; p.rot += 0.08; p.y += p.v; p.x += Math.sin(p.ph) * 1.6;
           c.save(); c.translate(p.x, p.y); c.rotate(p.rot); c.fillStyle = `hsl(${p.hue},85%,65%)`;
           c.fillRect(-p.s / 2, -p.s / 4 * Math.abs(Math.cos(p.ph)), p.s, p.s / 2 * Math.abs(Math.cos(p.ph)) + 1); c.restore();
-          if (p.y > 1100) fxParts[i] = newPart(); break;
+          if (p.y > stageH + 20) fxParts[i] = newPart(); break;
         case 'dust':
           p.ph += 0.01; p.y -= p.v * 0.3; p.x += Math.sin(p.ph) * 0.3;
           c.fillStyle = `rgba(255,240,210,${0.25 + Math.sin(p.ph * 2) * 0.2})`; c.beginPath(); c.arc(p.x, p.y, p.s, 0, 6.28); c.fill();
@@ -712,7 +718,7 @@
     const dur = 56000;
     roll.style.transition = 'none'; roll.style.transform = 'translateY(0)';
     void roll.offsetWidth;
-    roll.style.transition = `transform ${dur}ms linear`; roll.style.transform = `translateY(${-(h + 1080 - 300)}px)`;
+    roll.style.transition = `transform ${dur}ms linear`; roll.style.transform = `translateY(${-(h + stageH - 300)}px)`;
     let fast = false;
     const t0 = Date.now();
     while (Date.now() - t0 < dur && !fast) {

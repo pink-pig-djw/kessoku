@@ -10,7 +10,7 @@ if (!app.requestSingleInstanceLock()) app.quit();
 
 let win = null;
 function createWindow() {
-  // 窗口：屏幕可用区域的 80%，保持 16:9
+  // 窗口：屏幕可用区域的 80%，初始 16:9（之后可以随意拉伸）
   const wa = screen.getPrimaryDisplay().workAreaSize;
   let w = Math.round(wa.width * 0.8), h = Math.round(w * 9 / 16);
   if (h > wa.height * 0.85) { h = Math.round(wa.height * 0.85); w = Math.round(h * 16 / 9); }
@@ -21,7 +21,6 @@ function createWindow() {
     webPreferences: { contextIsolation: true, nodeIntegration: false, sandbox: true, spellcheck: false }
   });
   win.setMenu(null);
-  win.setAspectRatio(16 / 9);
   win.once('ready-to-show', () => win.show());
   win.loadFile(path.join(__dirname, 'www', 'index.html'));
 
@@ -30,9 +29,7 @@ function createWindow() {
     if (input.type !== 'keyDown') return;
     if (input.key === 'F11' || (input.alt && input.key === 'Enter')) { e.preventDefault(); win.setFullScreen(!win.isFullScreen()); }
   });
-  // 全屏时不锁比例，退出全屏后恢复 16:9
-  win.on('enter-full-screen', () => win.setAspectRatio(0));
-  win.on('leave-full-screen', () => win.setAspectRatio(16 / 9));
+  // 不锁窗口比例：游戏画面会按窗口比例自动铺满，不留黑边
   // 不在窗口里打开别的网页
   win.webContents.setWindowOpenHandler(({ url }) => { if (/^https?:/.test(url)) shell.openExternal(url); return { action: 'deny' }; });
   win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith('file:')) e.preventDefault(); });
