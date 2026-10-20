@@ -85,7 +85,7 @@ tools/                出图、校验、自动通关测试脚本
 
 ## 安卓 App
 
-从 [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 下载 `孤独摇滚-第五条音轨.apk`（约 105MB）：传到安卓手机上点开安装（第一次需要允许「安装未知来源应用」）。横屏全屏、离线可玩，存档保存在手机里。
+从 [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 下载 `kessoku-fifth-track-android.apk`（约 105MB）：传到安卓手机上点开安装（第一次需要允许「安装未知来源应用」）。横屏全屏、离线可玩，存档保存在手机里。这个 APK 是先前的构建，本次窗口缩放更新仅适用于 Windows 和浏览器版。
 
 手机操作：点击屏幕前进 · 长按屏幕隐藏界面 · 向下滑查看记录 · 返回键关闭菜单 / 回到标题。在手机浏览器里直接打开网页版也会自动切换成手机界面。
 
@@ -101,8 +101,8 @@ bash tools/build_apk.sh
 
 ## Windows 版
 
-- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `孤独摇滚-第五条音轨-1.0.1-win.exe`：安装程序（约 166MB），可以选安装位置，会建桌面和开始菜单快捷方式。
-- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `孤独摇滚-第五条音轨-1.0.1-win.zip`：免安装版，解压后双击 `孤独摇滚！第五条音轨.exe`。
+- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `kessoku-fifth-track-1.0.1-setup.exe`：安装程序（约 166MB），可以选安装位置，会建桌面和开始菜单快捷方式。
+- [Releases](https://github.com/pink-pig-djw/kessoku/releases/latest) 中的 `kessoku-fifth-track-1.0.1-portable.zip`：免安装版，解压后双击 `孤独摇滚！第五条音轨.exe`。
 - 窗口 16:9，可以拉伸；**F11 或 Alt+Enter 切换全屏**。不需要联网，存档保存在本机。
 - 程序没有数字签名，第一次运行时 Windows 可能弹出「Windows 已保护你的电脑」，点「更多信息 → 仍要运行」。
 
