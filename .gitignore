@@ -17,9 +17,6 @@ app/keystore.properties
 *.jks
 *.keystore
 
-# Generated or superseded image assets
-assets/_bg_photo_backup/
-
 # Local caches
 __pycache__/
 *.log
