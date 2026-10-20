@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><title>素材检查</title>
+<style>
+body { background: #3a3d48; color: #eee; font: 13px sans-serif; margin: 10px; }
+.grid { display: flex; flex-wrap: wrap; gap: 6px; }
+.it { width: 150px; text-align: center; }
+.it img { width: 150px; height: 225px; object-fit: contain; background: repeating-conic-gradient(#555 0 25%, #666 0 50%) 0 0/16px 16px; }
+.bg .it { width: 300px; } .bg .it img { width: 300px; height: 200px; object-fit: cover; }
+h2 { margin: 14px 0 6px; }
+</style></head><body>
+<script src="../js/assets.js"></script>
+<script>
+const A = window.ASSETS, q = new URLSearchParams(location.search), mode = q.get('m') || 'ch', who = q.get('c');
+let html = '';
+if (mode === 'ch') {
+  for (const [id, c] of Object.entries(A.ch)) {
+    if (who && who !== id) continue;
+    html += `<h2>${id}</h2><div class="grid">` + c.exprs.map(e => `<div class="it"><img src="../assets/ch/${id}_${e}.png"><div>${e}</div></div>`).join('') + '</div>';
+  }
+} else if (mode === 'face') {
+  html = '<div class="grid">' + Object.entries(A.ch).map(([id, c]) => {
+    const [cx, cy, size] = c.face, k = 150 / size;
+    return `<div class="it"><div style="width:150px;height:150px;border-radius:50%;overflow:hidden;background:url(../assets/ch/${id}_normal.png) no-repeat ${-(cx * k - 75)}px ${-(cy * k - 75)}px/${1024 * k}px ${1536 * k}px #2a3554"></div><div>${id}</div></div>`;
+  }).join('') + '</div>';
+} else if (mode === 'bg') {
+  html = '<div class="grid bg">' + Object.entries(A.bg).filter(([k, v]) => v).map(([k, v]) => `<div class="it"><img src="../${v.src}"><div>${k}${v.out ? ' (户外)' : ''}</div></div>`).join('') + '</div>';
+} else {
+  const ids = A.cg.map(c => c.id).concat(Object.values(A.titles).map(t => t.replace('assets/cg/', '').replace('.png', '')));
+  html = '<div class="grid bg">' + ids.map(k => `<div class="it"><img src="../assets/cg/${k}.png"><div>${k}</div></div>`).join('') + '</div>';
+}
+document.body.innerHTML += html;
+</script></body></html>

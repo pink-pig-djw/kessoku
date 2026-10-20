@@ -1,0 +1,5 @@
+1. id "ch_bocchi_cry": crying: tears streaming down her cheeks, eyes squeezed half shut, trembling mouth.
+2. id "ch_bocchi_blush": deeply embarrassed: her whole face bright red up to the ears, eyes darting aside, lips pressed together, a little steam above her head.
+3. id "ch_bocchi_serious": the calm, cool, serious face she makes when she plays guitar: sharp focused eyes, mouth closed, no sweat drop.
+4. id "ch_bocchi_gag": her famous comedic breakdown face from the anime: the face drawn in a simplified deformed way, blank white dot eyes, a wobbly line mouth, thin cracks like broken porcelain running across her face (comedic and cute, not scary).
+5. id "ch_bocchi_guitar": CHANGE THE POSE: she now wears her translucent-black Yamaha Pacifica electric guitar (black pickguard) on a strap and is playing it, picking hand over the strings, fretting hand on the neck, head tilted slightly down with a calm focused face. Same outfit, same scale, head in the same place.

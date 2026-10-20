@@ -1,0 +1,48 @@
+{
+  "name": "kessoku-fifth-track",
+  "productName": "孤独摇滚！第五条音轨",
+  "version": "1.0.0",
+  "description": "孤独摇滚！ 第五条音轨 —— 《孤独摇滚！》同人视觉小说（非官方）",
+  "author": "Kessoku Fifth Track fan project",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis zip"
+  },
+  "build": {
+    "appId": "io.github.kessoku.fifthtrack",
+    "productName": "孤独摇滚！第五条音轨",
+    "artifactName": "孤独摇滚-第五条音轨-${version}-${os}.${ext}",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "www/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "孤独摇滚！第五条音轨",
+      "installerLanguages": [
+        "zh_CN"
+      ],
+      "language": "2052"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  }
+}

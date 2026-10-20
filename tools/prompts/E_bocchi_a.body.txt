@@ -1,0 +1,5 @@
+1. id "ch_bocchi_smile": a shy, awkward but genuine small smile, eyes looking slightly down, light blush.
+2. id "ch_bocchi_happy": a rare, genuinely happy, glowing smile with sparkling eyes, a little dorky (her face when she is praised).
+3. id "ch_bocchi_panic": her classic panic face: eyes wide with tiny shaking pupils, big sweat drops, wavy open mouth, pale blue shading on her face.
+4. id "ch_bocchi_sad": gloomy and downcast: eyes looking at the floor, eyebrows drawn together, small trembling mouth.
+5. id "ch_bocchi_surprised": startled: eyes wide, a small open mouth saying "eh?", eyebrows raised.

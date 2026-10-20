@@ -1,0 +1,4 @@
+1. id "ch_kita_sad": sad: a small forced smile that is clearly hiding pain, eyes downcast; the hand lowered.
+2. id "ch_kita_cry": crying: tears streaming down, eyebrows tense; the hand wiping her tears.
+3. id "ch_kita_blush": blushing deeply, an embarrassed shy smile; the hand touching her red cheek.
+4. id "ch_kita_serious": serious and determined: mouth closed, eyes focused; the hand lowered.

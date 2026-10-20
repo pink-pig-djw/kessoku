@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#05070d">
+<title>孤独摇滚！ 第五条音轨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css?v=13">
+</head>
+<body>
+<div id="rotate-hint"><div class="rh-icon">📱</div><div>请把手机横过来</div></div>
+<div id="viewport">
+  <div id="stage">
+    <!-- 场景层 -->
+    <div id="layer-bg"><div class="bg-img" id="bg-a"></div><div class="bg-img" id="bg-b"></div></div>
+    <div id="layer-ch"></div>
+    <div id="layer-cg"><div class="bg-img" id="cg-a"></div><div class="bg-img" id="cg-b"></div></div>
+    <canvas id="layer-fx" width="1920" height="1080"></canvas>
+    <div id="layer-tint"></div>
+    <div id="layer-flash"></div>
+
+    <!-- 日期卡 -->
+    <div id="date-card"><div class="date-main"></div><div class="date-sub"></div></div>
+
+    <!-- LINE -->
+    <div id="phone"><div class="ph-screen"><div class="ph-head"><span class="ph-title"></span></div><div class="ph-body"></div></div></div>
+
+    <!-- 文本框 -->
+    <div id="textbox" class="hidden">
+      <div id="facebox"><div class="face-img"></div></div>
+      <div id="namebox"><span id="name"></span></div>
+      <div id="tape-reel"><span></span><span></span></div>
+      <div id="text"></div>
+      <div id="wait-mark">▼</div>
+      <div id="quickmenu">
+        <button data-act="auto">自动</button>
+        <button data-act="skip">快进</button>
+        <button data-act="log">记录</button>
+        <button data-act="aff">好感</button>
+        <button data-act="flow">分支图</button>
+        <button data-act="save">存档</button>
+        <button data-act="load">读档</button>
+        <button data-act="qsave">快存</button>
+        <button data-act="qload">快读</button>
+        <button data-act="config">设置</button>
+        <button data-act="hide">隐藏</button>
+        <button data-act="title">标题</button>
+      </div>
+    </div>
+
+    <div id="center-text"></div>
+    <div id="choices"></div>
+    <div id="chapter-card"><div class="cc-num"></div><div class="cc-title"></div><div class="cc-sub"></div></div>
+    <div id="credits"><div id="credits-roll"></div></div>
+    <div id="layer-curtain"></div>
+    <div id="mode-indicator"></div>
+    <div id="aff-pop"></div>
+
+    <!-- 标题画面 -->
+    <div id="title-screen" class="screen">
+      <div class="title-bg"></div>
+      <div class="title-shade"></div>
+      <div class="title-logo">
+        <div class="logo-pre">ぼっち・ざ・ろっく！ 同人视觉小说</div>
+        <div class="logo-main">孤独摇滚！</div>
+        <div class="logo-sub">第五条音轨</div>
+        <div class="logo-en">THE FIFTH TRACK</div>
+        <div class="logo-tag">聚光灯照不到的地方</div>
+      </div>
+      <div class="title-menu">
+        <button data-act="new">开始游戏</button>
+        <button data-act="continue">继续游戏</button>
+        <button data-act="load">读取进度</button>
+        <button data-act="flow">分支图</button>
+        <button data-act="gallery">回忆相册</button>
+        <button data-act="config">设置</button>
+      </div>
+      <div class="title-foot">「好的录音师，是在录音里听不出来的人。」</div>
+    </div>
+
+    <!-- 存读档 -->
+    <div id="save-screen" class="screen panel">
+      <div class="panel-head"><span class="panel-title">存档</span><button class="panel-close">返回</button></div>
+      <div class="save-pages"></div>
+      <div class="save-grid"></div>
+    </div>
+
+    <!-- 记录 -->
+    <div id="log-screen" class="screen panel">
+      <div class="panel-head"><span class="panel-title">对话记录</span><button class="panel-close">返回</button></div>
+      <div class="log-list"></div>
+    </div>
+
+    <!-- 分支图 -->
+    <div id="flow-screen" class="screen panel">
+      <div class="panel-head"><span class="panel-title">分支图</span><span class="flow-hint">点击走过的节点，可以回到那个时刻重新选择</span><button class="panel-close">返回</button></div>
+      <div class="flow-legend"></div>
+      <div class="flow-wrap"><div class="flow-canvas"></div></div>
+    </div>
+
+    <!-- 好感度 -->
+    <div id="aff-screen" class="screen panel">
+      <div class="panel-head"><span class="panel-title">好感度</span><button class="panel-close">返回</button></div>
+      <div class="aff-note"></div>
+      <div class="aff-list"></div>
+    </div>
+
+    <!-- 设置 -->
+    <div id="config-screen" class="screen panel">
+      <div class="panel-head"><span class="panel-title">设置</span><button class="panel-close">返回</button></div>
+      <div class="config-body">
+        <label>文字速度<input type="range" min="0" max="100" data-cfg="textSpeed"><span class="cfg-val"></span></label>
+        <label>自动播放速度<input type="range" min="0" max="100" data-cfg="autoSpeed"><span class="cfg-val"></span></label>
+        <label>文本框不透明度<input type="range" min="20" max="100" data-cfg="boxOpacity"><span class="cfg-val"></span></label>
+        <label>音乐音量<input type="range" min="0" max="100" data-cfg="bgmVol"><span class="cfg-val"></span></label>
+        <label>环境音音量<input type="range" min="0" max="100" data-cfg="ambVol"><span class="cfg-val"></span></label>
+        <label>音效音量<input type="range" min="0" max="100" data-cfg="seVol"><span class="cfg-val"></span></label>
+        <label class="check"><input type="checkbox" data-cfg="skipUnread">快进时跳过未读文本</label>
+        <label class="check cfg-fullscreen"><input type="checkbox" data-cfg="fullscreen">全屏显示</label>
+        <div class="config-hint hint-touch">手机操作：点击屏幕 前进　·　长按屏幕 隐藏界面　·　向下滑 查看记录　·　返回键 关闭菜单 / 回到标题</div>
+        <div class="config-hint hint-pc">操作：点击 / 空格 / 回车 前进　·　按住 Ctrl 快进　·　滚轮上滑 查看记录　·　右键 隐藏界面　·　A 自动　·　S 快存　·　L 快读　·　F 分支图　·　G 好感度</div>
+      </div>
+    </div>
+
+    <!-- 回忆相册 -->
+    <div id="gallery-screen" class="screen panel">
+      <div class="panel-head"><span class="panel-title">回忆相册</span><button class="panel-close">返回</button></div>
+      <div class="gallery-tabs"><button data-tab="cg" class="on">CG</button><button data-tab="end">结局</button><button data-tab="music">音乐</button></div>
+      <div class="gallery-grid"></div>
+      <div class="gallery-end"></div>
+      <div class="gallery-music"></div>
+    </div>
+    <div id="gallery-view"></div>
+
+    <div id="confirm"><div class="confirm-box"><div class="confirm-msg"></div><div class="confirm-btns"><button data-v="1">确定</button><button data-v="0">取消</button></div></div></div>
+    <div id="toast"></div>
+    <div id="loading"><div class="loading-text">Loading…</div><div class="loading-bar"><span></span></div></div>
+  </div>
+</div>
+
+<script src="js/assets.js?v=13"></script>
+<script src="js/audio.js?v=13"></script>
+<script src="script/01_ch1.js?v=13"></script>
+<script src="script/02_ch2.js?v=13"></script>
+<script src="script/03_ch3.js?v=13"></script>
+<script src="script/10_bocchi.js?v=13"></script>
+<script src="script/20_nijika.js?v=13"></script>
+<script src="script/30_ryo.js?v=13"></script>
+<script src="script/40_kita.js?v=13"></script>
+<script src="script/50_normal.js?v=13"></script>
+<script src="js/engine.js?v=13"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+1. id "bg_classroom": A classroom of Shuka High School (the private high school from Bocchi the Rock!) in the morning: rows of desks, a blackboard with blurry chalk marks, large windows with sunlight, a seat by the window.
+2. id "bg_classroom_evening": The same kind of Japanese high school classroom at sunset after school: empty desks, long orange light and shadows through the windows.
+3. id "bg_school_stairs": The dim space under a staircase in a Japanese high school building, the kind of hidden corner where a lonely student eats lunch alone: concrete steps going up, a fire extinguisher, a stacked spare desk, a quiet shadowy corner, soft light from a window above.
+4. id "bg_school_hall": A Japanese high school corridor in the afternoon: windows on one side, classroom doors on the other, posters on a notice board, autumn light on the floor.
+5. id "bg_school_gate": The main gate of a Japanese private high school in late autumn: ginkgo trees with yellow leaves, the school building behind, afternoon.

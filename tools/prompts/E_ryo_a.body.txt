@@ -1,0 +1,4 @@
+1. id "ch_ryo_smug": a subtle smug, self-satisfied look: a slight smirk, eyes half closed proudly.
+2. id "ch_ryo_smile": a rare small genuine smile, eyes softened.
+3. id "ch_ryo_surprised": subtly surprised: eyes a little wider, a small "o" mouth, still mostly deadpan.
+4. id "ch_ryo_sad": quietly sad: eyes downcast, a lonely look.

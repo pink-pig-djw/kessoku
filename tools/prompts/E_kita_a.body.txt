@@ -1,0 +1,4 @@
+1. id "ch_kita_happy": super excited: eyes sparkling with star highlights, a wide open-mouth grin; the peace-sign hand becomes a small excited fist near her chest.
+2. id "ch_kita_surprised": surprised: eyes wide, mouth open "eh?"; the peace-sign hand lowered.
+3. id "ch_kita_pout": pouting: cheeks puffed, eyebrows angry (the face she makes when someone calls her Ikuyo); the hand lowered into a small fist.
+4. id "ch_kita_soft": a soft, gentle, natural closed-mouth smile (not her bright performance smile); the hand lowered to her side.

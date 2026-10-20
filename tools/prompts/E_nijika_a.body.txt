@@ -1,0 +1,5 @@
+1. id "ch_nijika_laugh": laughing happily with her eyes closed in upward arcs and her mouth wide open.
+2. id "ch_nijika_surprised": surprised: eyes wide, mouth open in an "eh?!" shape, the waving hand frozen in the air.
+3. id "ch_nijika_pout": angry scolding pout: cheeks puffed, eyebrows furrowed; the raised hand is now a small scolding fist.
+4. id "ch_nijika_soft": a gentle, warm, closed-mouth soft smile; the raised hand is lowered to rest at her side.
+5. id "ch_nijika_dark": her scary "dark" smile: eyes closed in a smile but a dark shadow covers the upper half of her face, a cold aura; the raised hand is lowered.

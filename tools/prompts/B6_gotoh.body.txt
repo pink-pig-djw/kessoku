@@ -1,0 +1,5 @@
+1. id "bg_gotoh_house": The Gotoh family's two-story detached house in a quiet residential area near Kanazawa-hakkei, Yokohama, as in the anime: a normal suburban Japanese house with a small gate and a parking space, winter afternoon.
+2. id "bg_gotoh_room": Gotoh Hitori's bedroom as in the anime: a plain room with a low table, a sliding-door closet (oshiire) slightly open with darkness inside, a guitar stand, a few posters, a little messy, afternoon light.
+3. id "bg_gotoh_closet": The inside of Bocchi's closet (oshiire) turned into her secret recording space: very cramped and dark, a laptop glowing, a small amp, an audio interface, a microphone, a cushion, a blanket hung behind, band photos and printed papers pinned on the closet wall, lit by one small warm lamp.
+4. id "bg_gotoh_living": The Gotoh family's warm living room: a dining table, a sofa, a TV, a small dog bed, family photos, evening lights.
+5. id "bg_hakkei": The Hiragata Bay waterfront promenade at Kanazawa-hakkei, Yokohama, at dusk in winter: a walkway with a railing, calm bay water reflecting the orange and purple sky, small moored boats, a tiny shrine island with a torii in the distance.

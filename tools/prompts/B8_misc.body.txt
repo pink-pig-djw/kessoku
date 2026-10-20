@@ -1,0 +1,6 @@
+1. id "bg_ruins": The inside of an abandoned old building (haikyo) on the edge of Tokyo: a large empty concrete hall with broken windows, peeling paint, ivy growing in, shafts of afternoon light full of dust, an old upright piano covered in dust in a corner.
+2. id "bg_ryo_room": Yamada Ryo's large bedroom in her wealthy family's mansion: several bass guitars on stands, vintage effects pedals, stacks of records, a big bed, expensive furniture, clothes scattered around, dim lamp light at night.
+3. id "bg_riverside_dawn": The bank of the Tama River at dawn in winter: a wide grassy riverbank with dry weeds, a long bridge in the distance, the pale sunrise reflecting on the water, cold mist.
+4. id "bg_folt": FOLT, the bigger live house in Shinjuku from Bocchi the Rock!, seen from the floor: a bigger stage than STARRY with rows of lights, black walls, a bar, hazy colored stage lights, no people.
+5. id "bg_shrine_night": A small neighborhood Shinto shrine at night on New Year's Eve: a stone torii, lit paper lanterns along the path, a small shrine building, bare trees, a cold winter night.
+6. id "bg_karaoke": A small private karaoke box room at night: a big glowing screen with no text, a low table with a tambourine and two microphones, a red sofa, colorful dim lights.

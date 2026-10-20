@@ -1,0 +1,25 @@
+# Local dependencies and generated app builds
+**/node_modules/
+app/www/
+desktop/www/
+desktop/release/
+app/android/.gradle/
+app/android/build/
+app/android/app/build/
+app/android/capacitor-cordova-android-plugins/
+app/android/app/src/main/assets/public/
+tools/out/
+dist/
+
+# Local Android SDK settings and release signing credentials
+app/android/local.properties
+app/keystore.properties
+*.jks
+*.keystore
+
+# Generated or superseded image assets
+assets/_bg_photo_backup/
+
+# Local caches
+__pycache__/
+*.log

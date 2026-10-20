@@ -1,0 +1,11 @@
+You are generating art assets for a fan-made visual novel set in the world of the anime/manga "Bocchi the Rock!" (ぼっち・ざ・ろっく！). Canon characters must look exactly like their official TV anime designs (CloverWorks, 2022).
+IMPORTANT RULES:
+- Shell commands and file writes do NOT work in this environment. Do not try to run any commands. Only use your built-in image generation tool.
+- Generate each image below separately (one image per image-tool call), in the listed order. Follow each spec precisely; do not skip any.
+- After ALL images are generated, your final message must be ONLY a raw JSON object (no markdown fences, no commentary) mapping each image id to the absolute file path where that generated PNG was saved, for example {"ch_example": "C:\\Users\\...\\file.png"}.
+
+SHARED STYLE FOR EVERY IMAGE IN THIS BATCH: landscape 3:2, 1536x1024. Background art for a visual novel, in the style of the background art of the "Bocchi the Rock!" TV anime: detailed, realistic, painterly anime background of real places in Tokyo and Kanagawa, clean perspective, natural soft lighting, rich small details. Absolutely no people or characters, no text, no readable letters on signs (signs may only show blurry unreadable shapes), no logos, no watermark. Time of year: late autumn / early winter (November-December 2017) unless stated otherwise.
+
+1. id "bg_cemetery": TIME OF YEAR: March 21, the spring equinox, a mild sunny afternoon. A quiet Japanese temple cemetery in Tokyo: rows of grey stone family graves (no readable characters), wooden sotoba boards, a stone water basin with wooden ladles, a few early cherry and plum blossoms, a pale blue spring sky. Peaceful and gentle, not gloomy.
+2. id "bg_park_sakura": TIME OF YEAR: late March / early April. A neighborhood park in Setagaya, Tokyo, with cherry trees in full bloom: a pink blossom canopy, petals drifting and covering the path, benches, a few blue picnic sheets laid on the ground, bright soft spring daylight.
+3. id "bg_riverside_dusk": TIME OF YEAR: mid March, early spring, still a little cold. The wide grassy bank of the Tama River at dusk: dry grass with the first green shoots, a long bridge in the distance with a train crossing it, the orange and violet evening sky reflected on the calm water, a few street lamps beginning to glow on the levee path.

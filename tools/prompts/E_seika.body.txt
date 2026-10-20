@@ -1,0 +1,4 @@
+1. id "ch_seika_annoyed": irritated "tch" face: eyebrows furrowed, mouth twisted, arms still crossed.
+2. id "ch_seika_smile": a rare, soft, slightly embarrassed small smile, looking aside.
+3. id "ch_seika_surprised": surprised: eyes wide, mouth slightly open, arms still crossed.
+4. id "ch_seika_cry": trying to hold back tears: eyes wet, biting her lip, face turned slightly away, tsundere.

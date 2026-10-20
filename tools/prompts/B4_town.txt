@@ -1,0 +1,13 @@
+You are generating art assets for a fan-made visual novel set in the world of the anime/manga "Bocchi the Rock!" (ぼっち・ざ・ろっく！). Canon characters must look exactly like their official TV anime designs (CloverWorks, 2022).
+IMPORTANT RULES:
+- Shell commands and file writes do NOT work in this environment. Do not try to run any commands. Only use your built-in image generation tool.
+- Generate each image below separately (one image per image-tool call), in the listed order. Follow each spec precisely; do not skip any.
+- After ALL images are generated, your final message must be ONLY a raw JSON object (no markdown fences, no commentary) mapping each image id to the absolute file path where that generated PNG was saved, for example {"ch_example": "C:\\Users\\...\\file.png"}.
+
+SHARED STYLE FOR EVERY IMAGE IN THIS BATCH: landscape 3:2, 1536x1024. Background art for a visual novel, in the style of the background art of the "Bocchi the Rock!" TV anime: detailed, realistic, painterly anime background of real places in Tokyo and Kanagawa, clean perspective, natural soft lighting, rich small details. Absolutely no people or characters, no text, no readable letters on signs (signs may only show blurry unreadable shapes), no logos, no watermark. Time of year: late autumn / early winter (November-December 2017) unless stated otherwise.
+
+1. id "bg_station": The new Odakyu Line Shimokitazawa station entrance after the line went underground: a modern station building with a big glass front, the open plaza in front of it, late autumn afternoon.
+2. id "bg_lot_night": A long vacant lot along the former railway tracks in Shimokitazawa, left empty after the railway went underground: fenced gravel ground with dry weeds, construction fences, the backs of houses, a few street lamps, a winter night sky, lonely and quiet.
+3. id "bg_park": Donguri Hiroba, a small neighborhood park in Shimokitazawa: one big tree, benches, a small playground, fallen leaves, late autumn afternoon light.
+4. id "bg_record_shop": A cramped used record and used gear shop in Shimokitazawa: crates of vinyl records, CD racks, a glass case full of used guitar effects pedals, guitars and basses hanging on the wall, posters, warm lighting.
+5. id "bg_cafe": A trendy small cafe in Shimokitazawa: wooden interior, plants, pastel cakes in a glass case, a big window to the street, soft afternoon light, very photogenic.

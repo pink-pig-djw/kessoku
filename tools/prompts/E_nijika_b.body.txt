@@ -1,0 +1,4 @@
+1. id "ch_nijika_sad": sad: a weak forced smile, eyebrows drawn together, eyes glistening; the raised hand is lowered to her side.
+2. id "ch_nijika_cry": crying: tears streaming from her red eyes, biting her lip; the raised hand is lowered and clenched.
+3. id "ch_nijika_blush": flustered and blushing red, an embarrassed smile, eyes looking away; the raised hand now touches her own cheek.
+4. id "ch_nijika_serious": serious and determined leader face: mouth closed, steady eyes; the raised hand is lowered to her side.

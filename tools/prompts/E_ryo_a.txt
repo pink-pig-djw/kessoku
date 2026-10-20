@@ -1,0 +1,12 @@
+You are generating art assets for a fan-made visual novel set in the world of the anime/manga "Bocchi the Rock!" (ぼっち・ざ・ろっく！). Canon characters must look exactly like their official TV anime designs (CloverWorks, 2022).
+IMPORTANT RULES:
+- Shell commands and file writes do NOT work in this environment. Do not try to run any commands. Only use your built-in image generation tool.
+- Generate each image below separately (one image per image-tool call), in the listed order. Follow each spec precisely; do not skip any.
+- After ALL images are generated, your final message must be ONLY a raw JSON object (no markdown fences, no commentary) mapping each image id to the absolute file path where that generated PNG was saved, for example {"ch_example": "C:\\Users\\...\\file.png"}.
+
+EXPRESSION / OUTFIT VARIANTS. The attached image is the approved base character sprite (portrait 1024x1536, transparent background). For EVERY image in this batch, create an edited version of the attached sprite where ONLY what the variant describes changes (usually just the facial expression). Keep everything else as identical as possible: same character design, same anime art style and line weight, same coloring, same hair, same outfit, same pose, same framing, same scale and exact same position in the canvas (the head must stay in exactly the same place so the sprites can be swapped seamlessly). Output: portrait 2:3 1024x1536 PNG with a FULLY TRANSPARENT background (alpha), no background, no shadow, no text.
+
+1. id "ch_ryo_smug": a subtle smug, self-satisfied look: a slight smirk, eyes half closed proudly.
+2. id "ch_ryo_smile": a rare small genuine smile, eyes softened.
+3. id "ch_ryo_surprised": subtly surprised: eyes a little wider, a small "o" mouth, still mostly deadpan.
+4. id "ch_ryo_sad": quietly sad: eyes downcast, a lonely look.

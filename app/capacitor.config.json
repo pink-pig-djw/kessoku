@@ -1,0 +1,11 @@
+{
+  "appId": "io.github.kessoku.fifthtrack",
+  "appName": "孤独摇滚！第五条音轨",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#05070d",
+    "allowMixedContent": false,
+    "webContentsDebuggingEnabled": false
+  },
+  "server": { "androidScheme": "https" }
+}

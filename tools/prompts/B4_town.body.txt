@@ -1,0 +1,5 @@
+1. id "bg_station": The new Odakyu Line Shimokitazawa station entrance after the line went underground: a modern station building with a big glass front, the open plaza in front of it, late autumn afternoon.
+2. id "bg_lot_night": A long vacant lot along the former railway tracks in Shimokitazawa, left empty after the railway went underground: fenced gravel ground with dry weeds, construction fences, the backs of houses, a few street lamps, a winter night sky, lonely and quiet.
+3. id "bg_park": Donguri Hiroba, a small neighborhood park in Shimokitazawa: one big tree, benches, a small playground, fallen leaves, late autumn afternoon light.
+4. id "bg_record_shop": A cramped used record and used gear shop in Shimokitazawa: crates of vinyl records, CD racks, a glass case full of used guitar effects pedals, guitars and basses hanging on the wall, posters, warm lighting.
+5. id "bg_cafe": A trendy small cafe in Shimokitazawa: wooden interior, plants, pastel cakes in a glass case, a big window to the street, soft afternoon light, very photogenic.

@@ -1,0 +1,2 @@
+1. id "ch_pa_smile": a gentle happy smile with her eyes closed.
+2. id "ch_pa_mask": sick with the flu: wearing a white surgical mask, a cooling gel sheet on her forehead, flushed cheeks, teary sleepy eyes.

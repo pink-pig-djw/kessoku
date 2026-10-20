@@ -1,0 +1,5 @@
+1. id "bg_shimokita_day": A lively narrow shopping street in Shimokitazawa in the daytime: vintage clothing shops, record shops and small cafes, hanging signs (unreadable), parked bicycles, utility poles and wires, late autumn sunlight.
+2. id "bg_shimokita_evening": A narrow shopping street in Shimokitazawa at dusk: vintage clothing shops and small cafes with lights turning on, utility poles and wires against an orange and purple sky.
+3. id "bg_shimokita_night": A narrow shopping street in Shimokitazawa at night in winter: glowing shop windows, street lamps, utility poles and wires, cold dark sky, quiet.
+4. id "bg_shimokita_xmas": A street in Shimokitazawa at night decorated with Christmas illuminations: warm string lights between buildings, small trees wrapped in lights, glowing shop windows, a festive magical mood.
+5. id "bg_shimokita_rain": A Shimokitazawa back street at night in cold winter rain: wet asphalt reflecting neon and street lamps, puddles, rain falling, lonely.
